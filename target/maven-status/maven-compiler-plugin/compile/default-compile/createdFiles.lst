@@ -1,0 +1,5 @@
+com\kkovacstech\lagerverwaltung\controller\StatistikController.class
+com\kkovacstech\lagerverwaltung\LagerverwaltungApplication.class
+com\kkovacstech\lagerverwaltung\controller\ItemController.class
+com\kkovacstech\lagerverwaltung\model\Item.class
+com\kkovacstech\lagerverwaltung\repository\ItemRepository.class

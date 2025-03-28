@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lagerverwaltung</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="login-container" class="panel">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="login-benutzername">Benutzername:</label>
+        <input type="text" id="login-benutzername" required />
+    
+        <label for="login-passwort">Passwort:</label>
+        <input type="password" id="login-passwort" required />
+    
+        <button type="submit">Einloggen</button>
+      </form>
+      <p id="login-fehler" style="color: red; display: none;">❌ Falsche Zugangsdaten!</p>
+    </div>
+    <div id="app-inhalt" style="display: none;">
+    <div class="infobox-header">
+      <img src="logo.png" alt="Firmenlogo" class="logo groß" />
+      <div class="infotext">
+        <p>📦 Willkommen in unserem <strong>Lagerverwaltungssystem</strong>!</p>
+        <p>➕ Produkte hinzufügen</p>
+        <p>🛠️ Bearbeiten</p>
+        <p>❌ Löschen</p>
+        <p>🔍 Suchen und verwalten</p>
+        <p>🚀 Viel Erfolg beim digitalen Lagermanagement!</p>
+      </div>
+    </div>
+  
+    <!-- PRODUKT ŰRLAP PANEL -->
+    <div class="panel produkt-formular-wrapper">
+      <h2>Neues Produkt hinzufügen</h2>
+      <form id="produkt-formular" class="form-block">
+        <div class="form-group">
+          <label for="name">Produktname:</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="artikelnummer">Artikelnummer:</label>
+          <input type="text" id="artikelnummer" required />
+        </div>
+        <div class="form-group">
+          <label for="beschreibung">Beschreibung:</label>
+          <input type="text" id="beschreibung" />
+        </div>
+        <div class="form-group">
+          <label for="menge">Menge:</label>
+          <input type="number" id="menge" required />
+        </div>
+        <div class="form-group">
+          <label for="lager">Lager:</label>
+          <select id="lager" required>
+            <option value="Zentrallager">Zentrallager</option>
+            <option value="Lager 1">Lager 1</option>
+            <option value="Lager 2">Lager 2</option>
+          </select>
+        </div>
+        <button type="submit">Hinzufügen</button>
+      </form>
+    </div>
+
+    <hr />
+
+    <!-- GOMBOK -->
+    <div class="flex-buttons">
+      <button type="button" id="zugang-button">Zugang</button>
+      <button type="button" id="abgang-button">Abgang</button>
+      <button type="button" id="bearbeiten-auswahl">Ausgewähltes bearbeiten</button>
+      <button type="button" id="geloeschte-auswahl">Ausgewählte löschen</button>
+    </div>
+
+    <!-- KERESÉS + LAGERVÁLASZTÓ -->
+    <div class="tabelle-header">
+      <h3>Produktliste</h3>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 25px;">🔍</span>
+        <input
+          type="text"
+          id="suche"
+          placeholder="Suche nach Name oder Artikelnummer"
+        />
+      </div>
+    </div>
+
+    <!-- TÁBLÁZAT -->
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Produktname</th>
+          <th>Artikelnummer</th>
+          <th>Beschreibung</th>
+          <th>Menge</th>
+          <th>Lager</th>
+        </tr>
+      </thead>
+      <tbody id="produkt-tabelle">
+        
+        <!-- Dinamikusan töltődik -->
+      </tbody>
+    </table>
+
+    <div id="statistik-box" class="statistik-box">
+      <h3>📊 Statistiken</h3>
+      <p><strong>Gesamtanzahl Produkte:</strong> <span id="gesamt-produkte">0</span></p>
+      <p><strong>Gesamtmenge:</strong> <span id="gesamt-menge">0</span></p>
+      <p><strong>Produkt mit größtem Bestand:</strong> <span id="top-produkt">-</span></p>
+    </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>

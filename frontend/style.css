@@ -1,0 +1,146 @@
+body {
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px 40px;
+}
+
+.infobox-header {
+  background-color: #eaeaea;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.infobox-header .logo {
+  max-width: 120px;
+  margin-bottom: 15px;
+}
+
+.logo.groß {
+  max-width: 160px;
+}
+
+.infobox-header .infotext {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* FORM PANEL ALÁ KERÜL */
+.produkt-formular-wrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* Form csoportok egységes stílusa */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.panel form input,
+.panel form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+/* Keresőmező */
+#suche {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Táblázat */
+table {
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsív nézet mobilra */
+@media (max-width: 768px) {
+  .panel-wrapper {
+    flex-direction: column;
+  }
+}
+
+button[type="button"] {
+  background-color: #4b4b4b88;
+  color: white;
+  border: none;
+  padding: 12px 24px;       /* nagyobb belső tér */
+  font-size: 16px;          /* nagyobb betű */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 20%;              /* teljes szélesség */
+}
+
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+.statistik-box {
+  background-color: #f0f4f8;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 220px;
+}
+.statistik-box h3 {
+  margin-top: 0;
+}
